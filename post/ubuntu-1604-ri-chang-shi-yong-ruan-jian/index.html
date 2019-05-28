@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>ArChang</title>
+<title>Ubuntu 16.04日常使用软件 | ArChang</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zhangxuhao98.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -75,19 +83,65 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
+            <div class="feature-container" style="background-image: url('https://zhangxuhao98.github.io/post-images/ubuntu-1604-ri-chang-shi-yong-ruan-jian.png')">
+            </div>
+          
+          <h2 class="post-title">Ubuntu 16.04日常使用软件</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-05-28</span>
             
-              <a class="tag" href="https://zhangxuhao98.github.io/tag/fkdARWhcL">Linux</a>
-            
-              <a class="tag" href="https://zhangxuhao98.github.io/tag/gridea">Gridea</a>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://zhangxuhao98.github.io/tag/fkdARWhcL">
+                    Linux
+                    
+                  </a>
+                
+              </span>
             
           </div>
+          <div class="post-content">
+            <p>音乐软件<a href="https://github.com/xtuJSer/CoCoMusic">CoCoMusic</a>
+QQ+WeChat+百度网盘<a href="https://github.com/wszqkzqk/deepin-wine-ubuntu">deepin-wine-ubuntu</a>
+<a href="https://www.ncnynl.com/archives/201608/496.html">ROS</a>
+RoboWare Studio
+GDebi</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install gdebi
+</code></pre>
+<p>删除部分不常用软件
+<code>sudo apt-get remove unity-webapps-common</code></p>
+<pre><code>sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install 
+</code></pre>
+<p><code>sudo apt-get remove onboard deja-dup</code></p>
 
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zhangxuhao98.github.io/post/hello-gridea">
+              <h3 class="post-title">
+                下一篇：Hello Gridea
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
   <div class="slogan">温故而知新</div>
   <div class="social-container">
     
@@ -106,8 +160,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -122,7 +176,29 @@ var app = new Vue({
 
 
 
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
 
-    </div>
+      var gitalk = new Gitalk({
+        clientID: '    a376a0da01e723fcee51',
+        clientSecret: '    1c058c373e47a8f0869a83dbca39510b4a323bb1',
+        repo: 'zhangxuhao98.github.io',
+        owner: 'zhangxuhao98',
+        admin: ['zhangxuhao98'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
   </body>
 </html>
